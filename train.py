@@ -93,7 +93,7 @@ def main(args):
     # Train the Network
     start_time = time.time()
     for epoch in range(1, args['epochs']+1):
-        lr = Poly(optimizer, args['lr'], epoch-1, max_iter=args['epochs'])
+        lr = Poly_lr_scheduler(optimizer, args['lr'], epoch-1, max_iter=args['epochs'])
         print('*'*20)
         print('Epoch{}/{}:lr={}'.format(epoch, args['epochs'],lr))
         print('*'*20)
