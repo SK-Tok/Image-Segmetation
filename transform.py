@@ -38,6 +38,7 @@ class NPSegFlip(object):
             GT_arr = np.flip(GT_arr, 2).copy()
             arr_list = [image_arr, GT_arr]
             return arr_list
+        
 # Rotate
 class NPRandomRotate(object):
     def __init__(self):
